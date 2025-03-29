@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Movie Reviews</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>My Movie Reviews</h1>
+            <div class="user-info">
+                <span id="user-name">Welcome!</span>
+                <button id="logout-btn" class="btn-small">Logout</button>
+            </div>
+        </header>
+        
+        <section class="add-movie-section">
+            <h2>Add a New Movie Review</h2>
+            <form id="add-movie-form">
+                <div class="form-group">
+                    <label for="movie-title">Movie Title</label>
+                    <input type="text" id="movie-title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="movie-review">Your Review</label>
+                    <textarea id="movie-review" name="review" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="movie-rating">Rating (1-5)</label>
+                    <select id="movie-rating" name="rating">
+                        <option value="1">1 Star</option>
+                        <option value="2">2 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="5">5 Stars</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Add Review</button>
+            </form>
+        </section>
+        
+        <section class="movie-list-section">
+            <h2>Your Movie Reviews</h2>
+            <div id="movie-list" class="movie-grid">
+                <!-- Movie cards will be dynamically added here -->
+            </div>
+        </section>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
